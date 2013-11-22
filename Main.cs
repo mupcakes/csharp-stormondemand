@@ -43,10 +43,9 @@ namespace StormOnDemandAPI
 
 			// Storing response in a class object
 			ipRes = JsonConvert.DeserializeObject<IPDetailsResponse>(response);
+			Console.WriteLine ("\n");
 
 			#endregion
-
-			Console.WriteLine ("\n");
 
 			#region Using a Dictionary
 			Dictionary<dynamic, string> dictionaryIpDetails = new Dictionary<dynamic, string>();
@@ -55,22 +54,20 @@ namespace StormOnDemandAPI
 
 			// APIMethods.* always return the JSON string response from the API
 			Console.WriteLine (APIMethods.Network.IP.Details (dictionaryIpDetails));
+			Console.WriteLine ("\n");
 
 			#endregion
 
-			Console.WriteLine ("\n");
-
-			#region Using a Dictionary
+			#region Using a Hashtable
 			Hashtable hashIpDetails = new Hashtable();
 			hashIpDetails.Add ("uniq_id", _uid);
 			hashIpDetails.Add ("ip", _ip);
 
 			// APIMethods.* always return the JSON string response from the API
 			Console.WriteLine (APIMethods.Network.IP.Details (hashIpDetails));
+			Console.WriteLine ("\n");
 
 			#endregion
-
-			Console.WriteLine ("\n");
 
 			#region Documentation example
 			// Can use docmentation to pull info on methods such as Network/IP/details
