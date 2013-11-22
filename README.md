@@ -10,7 +10,7 @@ Uses Newtonsoft's JSON library, Modified for Liquid Web's Storm API.
 Compatible with .Net 4 on Linux and .Net 3.0, 3.5, 4, 4.5 on Windows
 When compiling on linux using .NET 4, requires compiler symbol NET35 depending on version of BigInteger.parse() your using.
 
-Can deserialize/serialize Classes, Hashtables, Dictionaries, Objects, Dynamic Objects to and from JSON or XML format.
+Can deserialize/serialize Classes, Hashtables, Dictionaries, Objects, Dynamic Objects to and from JSON format.
 
 The APIMethods folder isn't required. It's just a set of helper classes there to make it easier when using an IDE 
 with intellisense to remember the methods along with the commenting that will display as tooltips for each method.
