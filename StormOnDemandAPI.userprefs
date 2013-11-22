@@ -1,0 +1,37 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Main.cs">
+    <Files>
+      <File FileName="Main.cs" Line="27" Column="4" />
+      <File FileName="API/Documentation.cs" Line="1" Column="1" />
+      <File FileName="UnitTests/APIPing.cs" Line="1" Column="1" />
+      <File FileName="API/APIHandler.cs" Line="122" Column="17" />
+      <File FileName="API/APIMethods/Account.cs" Line="43" Column="4" />
+      <File FileName="API/APIRequests/IPDetailsRequest.cs" Line="1" Column="1" />
+      <File FileName="UnitTests/Serialize.cs" Line="68" Column="4" />
+      <File FileName="UnitTests/Deserialize.cs" Line="1" Column="1" />
+      <File FileName="UnitTests/Authentication.cs" Line="1" Column="1" />
+      <File FileName="UnitTests/GenericPing.cs" Line="36" Column="32" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="StormOnDemandAPI" expanded="True" />
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
