@@ -22,7 +22,7 @@ namespace StormOnDemandAPI
 			Auth.username = "USER";
 			Auth.password = "PASSWORD";
 
-			string _uid = "UID";
+			string _uid = "ABCDEF";
 			string _ip = "127.0.0.1";
 
 			//populate documentation

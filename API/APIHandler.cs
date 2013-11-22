@@ -43,7 +43,7 @@ namespace StormOnDemandAPI
 	public enum EncodeType
 	{
 		JSON,
-		XML,
+		//XML,
 		YAML }
 	;
 
@@ -81,8 +81,9 @@ namespace StormOnDemandAPI
 			// Build API post URI
 			string _url = string.Format ("{0}{1}{2}",APIHandler.Environment, APIHandler.Version, method);
 
-			if (encoding == EncodeType.XML && !_url.EndsWith (".xml"))
-				_url += ".xml";
+			//if (encoding == EncodeType.XML && !_url.EndsWith (".xml"))
+			//	_url += ".xml";
+
 			//Setup web request
 			_webRequest = WebRequest.Create (_url);
 
@@ -147,17 +148,18 @@ namespace StormOnDemandAPI
 					return Post<string> (decode, method, pars, EncodeType.JSON);
 				}
 
-			case EncodeType.XML:
-				{
-					Func<string, string> decode = responseStr =>
-					{
-						//Clean the XML sheet of any invalid elements as per the ISO standard
-						// rewrites zone elements such as <10> to <zone_10>
-						return Regex.Replace (responseStr, @"<(/?)([0-9]*)[$>]", String.Format ("<{0}zone_{1}>", "$1", "$2"));
-					};
+//			case EncodeType.XML:
+//				{
+//					Func<string, string> decode = responseStr =>
+//					{
+//						Clean the XML sheet of any invalid elements as per the ISO standard
+//						 rewrites zone elements such as <10> to <zone_10>
+//						return Regex.Replace (responseStr, @"<(/?)([0-9]*)[$>]", String.Format ("<{0}zone_{1}>", "$1", "$2"));
+//					};
+//
+//					return Post<string> (decode, method, pars, EncodeType.XML);
+//				}
 
-					return Post<string> (decode, method, pars, EncodeType.XML);
-				}
 			case EncodeType.YAML: 
 				{
 					return "YAML not implemented yet";
@@ -174,11 +176,11 @@ namespace StormOnDemandAPI
 		/// <returns>
 		/// The element value.
 		/// </returns>
-		public static string ReadElementValue (XPathNavigator nav, string elementName)
-		{
-			XPathNodeIterator element = nav.Select (elementName);
-
-			return element != null && element.MoveNext () ? element.Current.Value : String.Empty;
-		} 
+//		public static string ReadElementValue (XPathNavigator nav, string elementName)
+//		{
+//			XPathNodeIterator element = nav.Select (elementName);
+//
+//			return element != null && element.MoveNext () ? element.Current.Value : String.Empty;
+//		} 
 	}
 }
