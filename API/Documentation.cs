@@ -43,7 +43,7 @@ namespace APIMethods
 		/// <summary>
 		/// Generates a Dictionary key,value set of the JSON documentation.
 		/// </summary>
-		public static Dictionary<string, dynamic> PullAPIDocs ()
+		private static Dictionary<string, dynamic> PullAPIDocs ()
 		{
 			WebClient cli = new WebClient ();
 
