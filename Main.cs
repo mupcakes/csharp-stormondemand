@@ -26,7 +26,7 @@ namespace StormOnDemandAPI
 			string _ip = "127.0.0.1";
 
 			//populate documentation
-			Documentation.PullAPIDocs ();
+			//Documentation.PullAPIDocs ();
 
 			#region using a static class
 			IPDetailsRequest ipReq = new IPDetailsRequest();
