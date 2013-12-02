@@ -38,7 +38,7 @@ namespace APIMethods
 	/// </summary>
 	public class Documentation
 	{
-		public static Dictionary<string, dynamic> docs;
+		public static Dictionary<string, dynamic> docs = PullAPIDocs();
 
 		/// <summary>
 		/// Generates a Dictionary key,value set of the JSON documentation.
@@ -58,10 +58,7 @@ namespace APIMethods
 		/// </summary>
 		public static JObject MethodInfo (string category, string method)
 		{ 
-			if (docs == null)
-				PullAPIDocs ();
-
-			return docs[category]["__methods"][method]; 
+			return docs == null ? PullAPIDocs() : docs[category]["__methods"][method]; 
 		}
 
 		/// <summary>
@@ -69,10 +66,7 @@ namespace APIMethods
 		/// </summary>
 		public static JValue MethodInfo (string category, string method, string parameters)
 		{ 
-			if (docs == null)
-				PullAPIDocs ();
-
-			return docs[category]["__methods"][method][parameters]; 
+			return docs == null ? PullAPIDocs () : docs[category]["__methods"][method][parameters]; 
 		}
 	}
 }
