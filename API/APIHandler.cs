@@ -112,7 +112,7 @@ namespace StormOnDemandAPI
 					}
 				}
 			} catch (WebException ex) {
-				//Catch a couple web errors, or display generic eror by error code
+				//Catch a couple web errors for example, or display generic eror by error code
 				if (ex.Status == WebExceptionStatus.ProtocolError && ex.Response != null) {
 					var resp = (HttpWebResponse)ex.Response;
 					if (resp.StatusCode == HttpStatusCode.NotFound) {
