@@ -53,7 +53,7 @@ namespace StormOnDemandAPI
 	public class APIHandler
 	{
 		/// <summary>
-		/// The API Version to to use ie: v1/bleed, defaults to v1
+		/// The API Version to to use ie: v1, bleed
 		/// </summary>
 		public static string Version = "v1";
 
