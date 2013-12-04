@@ -1,8 +1,8 @@
-#*.sln
-#*.csproj
+*.sln
+*.csproj
 *.userprefs
 bin/
 test-results/
-#Main.cs
-#main.cs
+Main.cs
+main.cs
 TestResult.xml
