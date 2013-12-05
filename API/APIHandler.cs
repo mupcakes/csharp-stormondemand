@@ -70,7 +70,7 @@ namespace StormOnDemandAPI
 		/// </returns>
 		private static T Post<T> (Func<string, T> decode, string method, string parameters, EncodeType encoding = EncodeType.JSON)
 		{
-			// Uncomment to ignore cert warnings
+			// Use this to ignore cert warning when running through your IDE
 			ServicePointManager.ServerCertificateValidationCallback = ( se, cert, chain, sslerror ) => { return true; };
 
 			WebRequest _webRequest;
