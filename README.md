@@ -3,6 +3,8 @@ StormOnDemandAPI
 
 C# Library to assist with using the Storm On Demand API.
 
+Works on linux and windows, only tested with using Monodevelop in each environment. 
+
 includes a sample project that uses API IPDetails method defined classes. 
 Can easily change the compile output to a library and add the library as a reference to your own project.
 
