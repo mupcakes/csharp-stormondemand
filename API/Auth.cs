@@ -47,7 +47,7 @@ namespace StormOnDemandAPI
 		/// <summary>
 		/// Returns the username and password as a ICredentials object for authentication in the APIHandler
 		/// </summary>
-		public static System.Net.ICredentials Credentials { get { return new System.Net.NetworkCredential (username, password); } }
+		public static ICredentials Credentials { get { return new System.Net.NetworkCredential (username, password); } }
 
 	}
 }
