@@ -2,6 +2,7 @@
 *.csproj
 *.userprefs
 bin/
+obj/
 test-results/
 Main.cs
 main.cs

@@ -243,11 +243,6 @@
     <Compile Include="API\APIResponses\IPDetailsResponse.cs" />
     <Compile Include="API\APIHandler.cs" />
     <Compile Include="API\Auth.cs" />
-    <Compile Include="UnitTests\Authentication.cs" />
-    <Compile Include="UnitTests\Serialize.cs" />
-    <Compile Include="UnitTests\Deserialize.cs" />
-    <Compile Include="UnitTests\GenericPing.cs" />
-    <Compile Include="UnitTests\APIPing.cs" />
     <Compile Include="API\Documentation.cs" />
   </ItemGroup>
   <ItemGroup>
