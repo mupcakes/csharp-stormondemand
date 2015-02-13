@@ -73,6 +73,10 @@ namespace StormOnDemandAPI
 			// Can use docmentation to pull info on methods such as Network/IP/details
 			Console.WriteLine (APIMethods.Network.IP.MethodInfo ("details"));
 			#endregion
+
+			#region APIHandler direct usage
+			Console.WriteLine (APIHandler.post("Storage/Block/Volume/list", ""));
+			#endregion
 		}
 	}
 }
