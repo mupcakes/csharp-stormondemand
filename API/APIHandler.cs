@@ -43,7 +43,6 @@ namespace StormOnDemandAPI
 	public enum EncodeType
 	{
 		JSON,
-		//XML,
 		YAML }
 	;
 
@@ -81,9 +80,6 @@ namespace StormOnDemandAPI
 			// Build API post URI
 			string _url = string.Format ("{0}{1}{2}",APIHandler.Environment, APIHandler.Version, method);
 
-			//if (encoding == EncodeType.XML && !_url.EndsWith (".xml"))
-			//	_url += ".xml";
-
 			//Setup web request
 			_webRequest = WebRequest.Create (_url);
 
@@ -117,7 +113,7 @@ namespace StormOnDemandAPI
 					var resp = (HttpWebResponse)ex.Response;
 					if (resp.StatusCode == HttpStatusCode.NotFound) {
 						// 404 Error
-						return decode ("404 error");
+						return _response = decode ("404 error");
 					} else if (resp.StatusCode == HttpStatusCode.BadRequest) {
 						// 400 Error
 						return _response = decode ("400 Error");
@@ -142,23 +138,9 @@ namespace StormOnDemandAPI
 			switch (encoding) {
 			case EncodeType.JSON: 
 				{					
-					Func<string, string> decode = responseStr => {
-						return (responseStr); };
-
+					Func<string, string> decode = responseStr => { return (responseStr); };
 					return Post<string> (decode, method, pars, EncodeType.JSON);
 				}
-
-//			case EncodeType.XML:
-//				{
-//					Func<string, string> decode = responseStr =>
-//					{
-//						Clean the XML sheet of any invalid elements as per the ISO standard
-//						 rewrites zone elements such as <10> to <zone_10>
-//						return Regex.Replace (responseStr, @"<(/?)([0-9]*)[$>]", String.Format ("<{0}zone_{1}>", "$1", "$2"));
-//					};
-//
-//					return Post<string> (decode, method, pars, EncodeType.XML);
-//				}
 
 			case EncodeType.YAML: 
 				{
@@ -169,18 +151,5 @@ namespace StormOnDemandAPI
 				return "Unrecognized encoding type";
 			}
 		}
-
-		/// <summary>
-		/// Reads the element value.
-		/// </summary>
-		/// <returns>
-		/// The element value.
-		/// </returns>
-//		public static string ReadElementValue (XPathNavigator nav, string elementName)
-//		{
-//			XPathNodeIterator element = nav.Select (elementName);
-//
-//			return element != null && element.MoveNext () ? element.Current.Value : String.Empty;
-//		} 
 	}
 }
